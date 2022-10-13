@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class=" container">
+        <h1>THE USER'S VIDEO GALLERY</h1>
+        <div class="row">
+            <div class="col">
+                <div class="feature-img">
+                    <img src="motivation.PNG" alt="" width="150%">
+                    <img src="play1.jpg" alt="" class="play-btn" onclick="playVideo('GET THROUGH IT - Motivational Speech.mp4')">
+                </div>
+
+            </div>
+
+            <div class="col">
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="motivation.PNG" alt="" >
+                        <img src="play1.jpg" alt="" class="play-btn" onclick="playVideo('GET THROUGH IT - Motivational Speech.mp4')">
+                    </div>
+                    
+                    <p>GET THROUGH IT - Motivational Speech</p>
+    
+                </div>
+
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="dax.PNG" alt="" >
+                        <img src="play1.jpg" alt="" class="play-btn" onclick="playVideo('Dax - Dear God Official Music Video.mp4')">
+                    </div>
+                    
+                    <p>Dax - "Dear God" (Official Music Video)</p>
+    
+                </div>
+
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="Capture.PNG" alt="" >
+                        <img src="play1.jpg" alt="" class="play-btn" onclick="playVideo('Mduduzi Ncube (Ft. Zakwe & Zamo Cofi) - Langa Linye [Official Music Video].mp4')">
+                    </div>
+                    
+                    <p>Mduduzi Ncube (Ft. Zakwe & Zamo Cofi) - Langa Linye [Official Music Video]</p>
+    
+                </div>
+    
+            </div>
+            
+
+        </div>
+        
+    </div>
+
+    <div class="video-player" id="videoPlayer">
+        <video width="100%" controls autoplay id="myVideo">
+            <source src="" type="video/mp4">
+        </video>
+        <img src="close.jpg" alt="" class="close-btn" onclick="stopVideo()">
+    </div>
+
+<script>
+    var videoPlayer = document.getElementById("videoPlayer")
+    var myVideo = document.getElementById("myVideo")
+
+    function stopVideo(){
+        videoPlayer.style.display = "none"
+    }
+
+    function playVideo(file){
+        myVideo.src = file;
+        videoPlayer.style.display = "block"
+    }
+</script>
+
+</body>
+</html>
